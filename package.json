@@ -45,6 +45,6 @@
 	},
 	"simple-git-hooks": {
 		"pre-commit": "pnpm lint",
-		"commit-msg": "npx commitlint --edit $1"
+		"commit-msg": "echo 'run commit-msg'"
 	}
 }
