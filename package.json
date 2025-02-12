@@ -9,7 +9,8 @@
 		"preview": "vite preview",
 		"build-only": "vite build",
 		"type-check": "vue-tsc --build",
-		"lint": "eslint . --fix"
+		"lint": "eslint . --fix",
+		"commitlint": "commitlint --edit"
 	},
 	"dependencies": {
 		"@unocss/reset": "^65.4.3",
@@ -44,7 +45,7 @@
 		"vue-tsc": "^2.2.0"
 	},
 	"simple-git-hooks": {
-		"pre-commit": "pnpm lint",
+		"pre-commit": "pnpm lint && pnpm commitlint",
 		"commit-msg": "echo 'run commit-msg'"
 	}
 }
