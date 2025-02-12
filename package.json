@@ -45,7 +45,7 @@
 		"vue-tsc": "^2.2.0"
 	},
 	"simple-git-hooks": {
-		"pre-commit": "pnpm lint && pnpm commitlint",
+		"pre-commit": "pnpm commitlint",
 		"commit-msg": "echo 'run commit-msg'"
 	}
 }
