@@ -1,6 +1,6 @@
 # vue3-project-template
 
-> 使用 vue3+element-plus+pinia+unocss 搭建
+> 使用 vue3.5+vite6+element-plus+pinia+unocss 搭建
 
 # 样式+icon
 

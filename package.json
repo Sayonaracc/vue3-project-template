@@ -3,6 +3,8 @@
 	"version": "0.0.0",
 	"private": true,
 	"type": "module",
+	"packageManager": "pnpm@10.3.0",
+	"license": "MIT",
 	"scripts": {
 		"dev": "vite",
 		"build": "run-p type-check \"build-only {@}\" --",
@@ -10,7 +12,8 @@
 		"build-only": "vite build",
 		"type-check": "vue-tsc --build",
 		"lint": "eslint . --fix",
-		"commitlint": "commitlint --edit"
+		"commitlint": "commitlint --edit",
+		"preinstall": "npx only-allow pnpm"
 	},
 	"dependencies": {
 		"@unocss/reset": "^65.4.3",
@@ -23,6 +26,9 @@
 		"@antfu/eslint-config": "^4.2.0",
 		"@commitlint/cli": "^19.7.1",
 		"@commitlint/config-conventional": "^19.7.1",
+		"@iconify-json/carbon": "^1.2.6",
+		"@iconify-json/ep": "^1.2.2",
+		"@iconify-json/fa": "^1.2.1",
 		"@tsconfig/node22": "^22.0.0",
 		"@types/node": "^22.13.1",
 		"@vitejs/plugin-vue": "^5.2.1",
@@ -34,11 +40,13 @@
 		"eslint-plugin-vue": "^9.32.0",
 		"jiti": "^2.4.2",
 		"npm-run-all2": "^7.0.2",
+		"only-allow": "^1.2.1",
 		"sass-embedded": "^1.83.4",
 		"simple-git-hooks": "^2.11.1",
 		"typescript": "~5.7.3",
 		"unocss": "^65.4.3",
 		"unplugin-auto-import": "^19.0.0",
+		"unplugin-icons": "^22.0.0",
 		"unplugin-vue-components": "^28.0.0",
 		"vite": "^6.0.11",
 		"vite-plugin-vue-devtools": "^7.7.1",
@@ -47,5 +55,9 @@
 	"simple-git-hooks": {
 		"pre-commit": "pnpm lint",
 		"commit-msg": "pnpm commitlint"
+	},
+	"engines": {
+		"node": ">=18",
+		"pnpm": ">=8.15.4"
 	}
 }

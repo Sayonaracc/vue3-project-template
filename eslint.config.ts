@@ -16,7 +16,9 @@ export default antfu(
       quotes: 'single', // or 'double'
     },
     languageOptions: {
-      globals: autoImport.globals,
+      globals: {
+        ...autoImport.globals,
+      },
     },
     typescript: true,
     vue: {
